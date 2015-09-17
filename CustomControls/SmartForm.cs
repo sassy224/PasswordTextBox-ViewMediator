@@ -521,6 +521,7 @@ namespace MainForm
         {
             //Init components
             InitializeComponent();
+
             //Init vars
             password = new StringBuilder();
 
@@ -528,9 +529,10 @@ namespace MainForm
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
-        }        
+        }
 
         #region Public Properties
+
         public string GetPassword()
         {
             return password.ToString();
@@ -547,8 +549,9 @@ namespace MainForm
                 return maskedChar;
             }
         }
+
         #endregion Public Properties
-        
+
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             MaskPassword(sender);

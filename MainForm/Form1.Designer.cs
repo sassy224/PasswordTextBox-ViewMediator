@@ -34,7 +34,7 @@
             // smartForm1
             // 
             this.smartForm1.Location = new System.Drawing.Point(12, 12);
-            this.smartForm1.MaskedChar = '#';
+            this.smartForm1.MaskedChar = '*';
             this.smartForm1.Name = "smartForm1";
             this.smartForm1.Size = new System.Drawing.Size(311, 60);
             this.smartForm1.TabIndex = 0;

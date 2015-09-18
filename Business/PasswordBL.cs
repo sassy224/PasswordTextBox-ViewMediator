@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common
+namespace Business
 {
-    public class PasswordUtils
+    public class PasswordBL
     {
         public static int ComputePasswordScore(string pwd)
         {
@@ -72,7 +72,7 @@ namespace Common
                     ConsecutiveMode = 0;
                 }
 
-                // Count repeated letters 
+                // Count repeated letters
                 if (Char.IsLetter(ch))
                 {
                     if (htRepeated.Contains(Char.ToLower(ch))) iRepeated++;
@@ -89,7 +89,7 @@ namespace Common
                 }
             }
 
-            // Check for sequential alpha string patterns (forward and reverse) 
+            // Check for sequential alpha string patterns (forward and reverse)
             for (int s = 0; s < 23; s++)
             {
                 string sFwd = sAlphas.Substring(s, 3);
@@ -128,7 +128,6 @@ namespace Common
                 score += ((pwd.Length - iLowerCase) * 2);
             }
 
-
             // Score += (Number of digits *4)
             score += (iDigit * 4);
 
@@ -149,7 +148,7 @@ namespace Common
             // If we have more than 3 requirments then
             if (requirments > 3)
             {
-                // Score += (requirments *2) 
+                // Score += (requirments *2)
                 score += (requirments * 2);
             }
 
@@ -188,7 +187,7 @@ namespace Common
 
             // If password contains sequence of digits then score -= (nSeqNumber * 3)
             score -= (nSeqNumber * 3);
-                        
+
             if (score < 1) score = 1;
             if (score > 100) score = 100;
 

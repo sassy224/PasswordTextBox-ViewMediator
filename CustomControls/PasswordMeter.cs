@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
-using Common;
 
 namespace CustomControls
 {
@@ -18,9 +17,10 @@ namespace CustomControls
         private LinearGradientBrush brush = null;
 
         #region Color Array
-        private Color[] Colors = { 
+
+        private Color[] Colors = {
                                  Color.FromArgb(255,255,0,0),
-                                 Color.FromArgb(255,255,1,0),                                                                 
+                                 Color.FromArgb(255,255,1,0),
                                 Color.FromArgb(255,255,2,0),
                                 Color.FromArgb(255,255,4,0),
                                 Color.FromArgb(255,255,5,0),
@@ -519,12 +519,13 @@ namespace CustomControls
                                 Color.FromArgb(255,0,102,0),
                                 Color.FromArgb(255,0,102,0),
                                 Color.FromArgb(255,0,102,0)};
-        #endregion                              
+
+        #endregion Color Array
 
         public PasswordMeter()
         {
             InitializeComponent();
-            
+
             score = 0;
             UpdateControl();
         }
@@ -546,7 +547,7 @@ namespace CustomControls
         }
 
         public void UpdateControl()
-        {            
+        {
             int x1 = score * 4;
             int x2 = x1 + 99;
             if (x2 >= 500) x2 = 499;

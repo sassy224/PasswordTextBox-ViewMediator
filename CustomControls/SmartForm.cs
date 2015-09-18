@@ -1,10 +1,10 @@
-﻿using Common;
+﻿using Business;
 using System;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MainForm
+namespace Presentation
 {
     public partial class SmartForm : UserControl
     {
@@ -557,8 +557,8 @@ namespace MainForm
             MaskPassword(sender);
 
             //Update PasswordMeter control
-            int score = PasswordUtils.ComputePasswordScore(password.ToString());
-            string strengh = PasswordUtils.GetPasswordStrengthText(score);
+            int score = PasswordBL.ComputePasswordScore(password.ToString());
+            string strengh = PasswordBL.GetPasswordStrengthText(score);
             pwdMeter.SetScore(score);
             pwdMeter.SetText(strengh);
             pwdMeter.UpdateControl();

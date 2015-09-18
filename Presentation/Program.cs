@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace MainForm
+namespace Presentation
 {
     internal static class Program
     {

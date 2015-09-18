@@ -1,4 +1,4 @@
-﻿namespace MainForm
+﻿namespace Presentation
 {
     partial class Form1
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.smartForm1 = new MainForm.SmartForm();
+            this.smartForm1 = new Presentation.SmartForm();
             this.SuspendLayout();
             // 
             // smartForm1

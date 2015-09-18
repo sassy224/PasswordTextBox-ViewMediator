@@ -62,9 +62,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
+    <ProjectReference Include="..\Business\Business.csproj">
       <Project>{2a47cfc1-dfee-4792-80f1-42d936a42b7e}</Project>
-      <Name>Common</Name>
+      <Name>Business</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿namespace MainForm
+﻿namespace Presentation
 {
     partial class SmartForm
     {
